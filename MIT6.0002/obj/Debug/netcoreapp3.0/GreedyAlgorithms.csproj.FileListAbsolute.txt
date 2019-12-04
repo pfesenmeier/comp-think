@@ -1,0 +1,8 @@
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\bin\Debug\netcoreapp3.0\GreedyAlgorithms.deps.json
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\bin\Debug\netcoreapp3.0\GreedyAlgorithms.dll
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\bin\Debug\netcoreapp3.0\GreedyAlgorithms.pdb
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\obj\Debug\netcoreapp3.0\GreedyAlgorithms.csprojAssemblyReference.cache
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\obj\Debug\netcoreapp3.0\GreedyAlgorithms.AssemblyInfoInputs.cache
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\obj\Debug\netcoreapp3.0\GreedyAlgorithms.AssemblyInfo.cs
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\obj\Debug\netcoreapp3.0\GreedyAlgorithms.dll
+C:\Users\pfese\source\repos\MIT6.0002\MIT6.0002\obj\Debug\netcoreapp3.0\GreedyAlgorithms.pdb

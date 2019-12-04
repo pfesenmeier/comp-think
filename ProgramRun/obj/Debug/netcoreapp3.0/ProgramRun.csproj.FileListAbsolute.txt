@@ -1,0 +1,14 @@
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.exe
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.deps.json
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.runtimeconfig.json
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.runtimeconfig.dev.json
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.dll
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\ProgramRun.pdb
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\GreedyAlgorithms.dll
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\bin\Debug\netcoreapp3.0\GreedyAlgorithms.pdb
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.csprojAssemblyReference.cache
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.AssemblyInfoInputs.cache
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.AssemblyInfo.cs
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.csproj.CopyComplete
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.dll
+C:\Users\pfese\source\repos\MIT6.0002\ProgramRun\obj\Debug\netcoreapp3.0\ProgramRun.pdb

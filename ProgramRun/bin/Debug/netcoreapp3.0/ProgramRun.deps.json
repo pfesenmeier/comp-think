@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "ProgramRun/1.0.0": {
+        "dependencies": {
+          "GreedyAlgorithms": "1.0.0"
+        },
+        "runtime": {
+          "ProgramRun.dll": {}
+        }
+      },
+      "GreedyAlgorithms/1.0.0": {
+        "runtime": {
+          "GreedyAlgorithms.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProgramRun/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "GreedyAlgorithms/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
