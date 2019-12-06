@@ -146,18 +146,46 @@ namespace MIT6._0002
 
     public class SearchTreeForKnapsackProblem
     {
-        public Tuple<int, List<Food>> MaxVal(List<Food> toConsider, int available)
+        public (int, List<Food>) MaxValue(List<Food> toConsider, int available)
         {
-            Tuple<int, List<Food>> result;
+            (int, List<Food>) result;
+            Food NextItem;
             if (toConsider.Count == 0 || available == 0)
-                result = new Tuple<int, List<Food>>(0, new List<Food>());
+                result = (0, new List<Food>());
             else if (toConsider[0].GetCost() > available)
                 // Explore right branch only
-                result = MaxVal(toConsider.Skip(1).ToList(), available);
-       
-
+                result = MaxValue(toConsider.Skip(1).ToList(), available);
+            else
+            {
+                NextItem = toConsider[0];
+                // Explore left branch
+                ( int WithVal, List<Food> WithToTake ) = MaxValue(toConsider.Skip(1).ToList(), available - NextItem.GetCost());
+                WithVal += NextItem.GetValue();
+                // Explore right branch
+                (int WithoutVal, List<Food> WithoutToTake) = MaxValue(toConsider.Skip(1).ToList(), available);
+                // Choose better branch
+                if (WithVal > WithoutVal)
+                    result = (WithVal, WithoutToTake.Append(NextItem).ToList());
+                else
+                    result = (WithoutVal, WithoutToTake);
+            }
+            return result;
+        }
+        public void TestMaxVal(List<Food> foods, int maxUnits, bool printItems = true)
+        {
+            Console.WriteLine($"Use search tree to allocate {maxUnits} calories.");
+            (int Value, List<Food> Taken) = MaxValue(foods, maxUnits);
+            Console.WriteLine($"Total value of items taken = {Value}");
+            Food Food;
+            if (printItems)
+                foreach (var item in Taken)
+                {
+                    Console.WriteLine($"    {item}");
+                }
+            if (foods.)
         }
     }
+
 
     public class WorkingWithTuples
     {

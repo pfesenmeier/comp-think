@@ -1,47 +1,105 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
-namespace ProgramRun
+public class Command
 {
-
-public class Programmer 
-{
-    public List<string> Languages { get; set; } = new List<string>();
-    public void AddLanguage(string language)
+    public Command() { }
+    public Command(string type, string name, bool active)
     {
-        Languages.Add(language);
-    } 
-}
-
-public class ProgrammerTeacher: Programmer
-{
-    public bool Teach(Programmer programmer, string language)
-    {
-        if (Languages.Contains(language))
-        {
-            programmer.AddLanguage(language);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        this.Type = type;
+        this.Name = name;
+        this.Active = active;
     }
+
+    public string Type;
+    public string Name;
+    public bool Active;
 }
 
-    public class Program
+public class Device
+{
+    public Device() { }
+    public Device(string id, string[] capabilities)
     {
-        public static void Main(string[] args)
+        this.Id = id;
+        this.Capabilities = capabilities;
+    }
+    public string Id;
+    public string[] Capabilities;
+}
+
+public class Challenge
+{
+    private static Command[] Commands()
+    {
+        Command[] array = new Command[9];
+
+        array[0] = new Command("audio", "turn down volume", true);
+        array[1] = new Command("audio", "turn up volume", true);
+        array[2] = new Command("music", "next song", true);
+        array[3] = new Command("music", "previous song", true);
+        array[4] = new Command("music", "purchase song", false); // payment integration still in beta
+        array[5] = new Command("channel", "channel up", true);
+        array[6] = new Command("channel", "channel down", true);
+        array[7] = new Command("temperature", "raise temperature", true);
+        array[8] = new Command("temperature", "lower temperature", true);
+
+        return array;
+    }
+
+    private static Device[] Devices()
+    {
+        Device[] array = new Device[5];
+
+        array[0] = new Device("Television", new string[] { "audio", "channel" });
+        array[1] = new Device("Stereo system", new string[] { "audio", "music" });
+        array[2] = new Device("Kitchen sink", new string[0]);
+        array[3] = new Device("Paper shredder", new string[] { "shredding" });
+        array[4] = new Device("Smart thermostat", new string[] { "temperature" });
+
+        return array;
+    }
+
+    public static List<string> ListCommands(string deviceId)
+    {
+        var Challenge = new Challenge();
+        var Commands = Challenge.Commands();
+        var Devices = Challenge.Devices();
+        var Device = new Device();
+        foreach (var device in Devices)
         {
-                  ProgrammerTeacher teacher = new ProgrammerTeacher();
-                  teacher.AddLanguage("C#");
-
-                 Programmer programmer = new Programmer();
-                 teacher.Teach(programmer, "C#");
-
-                  foreach (var language in programmer.Languages)
-                      Console.WriteLine(language);
+            if (device.Id == deviceId)
+            {
+                Device = device;
+            }
+            else
+            {
+                Device = new Device();
+                return null;
+            }
         }
+        var Capabilities = Device.Capabilities;
+        var DeviceCommands = new List<string>();
+        foreach (var command in Commands)
+        {
+            if (command.Active == true)
+            {
+                foreach (string capability in Capabilities)
+                {
+                    if (command.Type == capability)
+                    {
+                        DeviceCommands.Add(command.Name);
+                    }
+                }
+            }
+        }
+        return DeviceCommands;
+    }
+
+    public static bool CheckValid(string commandName, string deviceId)
+    {
+        // TODO: fill this out!
+        return false;
     }
 }
